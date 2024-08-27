@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "test": "vtex-test-tools test"
+  },
+  "devDependencies": {
+    "@types/atob": "^2.1.2",
+    "@types/co-body": "^6.1.0",
+    "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.178",
+    "@types/node": "^12.0.0",
+    "@vtex/api": "6.47.0",
+    "@vtex/test-tools": "^3.4.3",
+    "ts-jest": "^27.1.2",
+    "typescript": "3.9.7"
+  },
+  "dependencies": {
+    "@gocommerce/utils": "^0.7.3",
+    "@vtex/vtexis-compatibility-layer": "^1.6.4",
+    "atob": "^2.1.2",
+    "co-body": "^6.1.0",
+    "lodash": "^4.17.21",
+    "slugify": "^1.6.5",
+    "unescape": "^1.0.1"
+  },
+  "version": "0.0.0"
+}

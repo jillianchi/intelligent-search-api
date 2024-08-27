@@ -1,0 +1,71 @@
+{
+  "name": "intelligent-search-api",
+  "vendor": "jillian",
+  "version": "2.27.2",
+  "title": "[Custom] Intelligent Search API",
+  "description": "Forked from vtex.intelligent-search-api@0.27.0. Main changes: dependencies from vtex.store-graphql@2.x to jilian.store-graphql@3.x",
+  "mustUpdateAt": "2021-12-03",
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "credentialType": "absolute",
+  "dependencies": {
+    "vtex.catalog-api-proxy": "0.x",
+    "vtex.rewriter": "1.x",
+    "vtex.graphql-server": "1.x"
+  },
+  "peerDependencies": {
+    "jillian.store-graphql": "3.x"
+  },
+  "policies": [
+    {
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/search-api/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "attrs": {
+        "host": "is-ab.vtex.systems",
+        "path": "/api/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "jillian.store-graphql:resolve-graphql"
+    },
+    {
+      "name": "vtex.catalog-api-proxy:catalog-proxy"
+    },
+    {
+      "name": "vtex.catalog-api-proxy:authenticated-catalog-proxy"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "vtex.rewriter:resolve-graphql"
+    },
+    {
+      "name": "vtex.graphql-server:resolve-graphql"
+    }
+  ],
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "type": "free",
+    "availableCountries": ["*"]
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

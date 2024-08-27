@@ -1,0 +1,17 @@
+[
+    {
+        "name": "intelligent-search",
+        "description": "Allows access to the intelligent-search-api route",
+        "statements": [
+            {
+                "actions": [
+                    "get"
+                ],
+                "effect": "allow",
+                "resources": [
+                    "vrn:jillian.intelligent-search-api:{{region}}:{{account}}:{{workspace}}:/*"
+                ]
+            }
+        ]
+    }
+]

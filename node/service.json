@@ -1,0 +1,60 @@
+{
+  "stack": "nodejs",
+  "memory": 2048,
+  "cpu": {
+    "type": "shared",
+    "value": 80,
+    "scalingPercentage": 95
+  },
+  "ttl": 30,
+  "timeout": 12,
+  "minReplicas": 30,
+  "maxReplicas": 250,
+  "workers": 2,
+  "routes": {
+    "topSearches": {
+      "path": "/_v/api/intelligent-search/top_searches",
+      "public": true
+    },
+    "searchSuggestions": {
+      "path": "/_v/api/intelligent-search/search_suggestions",
+      "public": true
+    },
+    "autocompleteSearchSuggestions": {
+      "path": "/_v/api/intelligent-search/autocomplete_suggestions",
+      "public": true
+    },
+    "correction": {
+      "path": "/_v/api/intelligent-search/correction_search",
+      "public": true
+    },
+    "banners": {
+      "path": "/_v/api/intelligent-search/banners/*path",
+      "public": true
+    },
+    "facets": {
+      "path": "/_v/api/intelligent-search/facets/*path",
+      "public": true
+    },
+    "suggestionProducts": {
+      "path": "/_v/api/intelligent-search/suggestion_products",
+      "public": true
+    },
+    "productSearch": {
+      "path": "/_v/api/intelligent-search/product_search/*path",
+      "public": true
+    },
+    "product": {
+      "path": "/_v/api/intelligent-search/product",
+      "public": true
+    },
+    "variantProxy": {
+      "path": "/_v/api/intelligent-search/variant-proxy/*path",
+      "public": true
+    },
+    "sponsoredProducts": {
+      "path": "/_v/api/intelligent-search/sponsored_products/*path",
+      "public": true
+    }
+  }
+}

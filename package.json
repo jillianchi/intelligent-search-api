@@ -1,0 +1,39 @@
+{
+  "name": "intelligent-search",
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.12",
+    "@vtex/api": "^6.45.6",
+    "@vtex/danger": "^0.2.9",
+    "@vtex/prettier-config": "^0.3.6",
+    "@vtex/tsconfig": "^0.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-vtex": "^14.1.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
+    "typescript": "4.4.4"
+  },
+  "dependencies": {
+    "co-body": "^6.1.0"
+  }
+}
